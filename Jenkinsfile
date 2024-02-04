@@ -3,8 +3,10 @@ pipeline {
 
     stages {
         stage("Git-Checkout") {
+            steps {
             git branch: 'main', 
             url: 'https://github.com/ash2code/jenkins-lab.git'
+            }
         }
         stage("Build") {
             steps {
